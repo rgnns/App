@@ -1,0 +1,31 @@
+name: Grannie
+
+options:
+  createIntermediateGroups: true
+
+targets:
+  Grannie:
+    platform: iOS
+    type: application
+    info:
+      path: Grannie/Info.plist
+      properties:
+        UILaunchStoryboardName: LaunchScreen.storyboard
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.Grannie
+    sources:
+      - path: Grannie/Sources
+      - path: Grannie/Resources
+  GrannieTests:
+    platform: iOS
+    type: bundle.unit-test
+    info:
+      path: Grannie/Tests-Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.GrannieTests
+    sources:
+      - path: Grannie/Tests
+    dependencies:
+      - target: Grannie
