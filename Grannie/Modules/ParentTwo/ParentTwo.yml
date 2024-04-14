@@ -1,0 +1,21 @@
+name: ParentTwo
+
+include:
+  - ../Children.yml
+  - ../ChildOne/ChildOne.yml
+  - ../ChildTwo/ChildTwo.yml
+  - ../ChildThree/ChildThree.yml
+
+targets:
+  ParentTwo:
+    platform: iOS
+    type: framework
+    info:
+      path: Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.GrannieParentTwo
+    sources:
+      - path: Sources
+    dependencies:
+      - target: Children

@@ -1,0 +1,22 @@
+name: Children
+
+include:
+  - ChildOne/ChildOne.yml
+  - ChildTwo/ChildTwo.yml
+  - ChildThree/ChildThree.yml
+
+targets:
+  Children:
+    platform: iOS
+    type: framework
+    info:
+      path: Children-Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.GrannieChildren
+    sources:
+      - path: ../../Shared/Sources/Stub.swift
+    dependencies:
+      - target: ChildOne
+      - target: ChildTwo
+      - target: ChildThree

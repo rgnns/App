@@ -1,0 +1,13 @@
+name: ChildOne
+
+targets:
+  ChildOne:
+    platform: iOS
+    type: framework.static
+    info:
+      path: Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.GrannieChildOne
+    sources:
+      - path: Sources

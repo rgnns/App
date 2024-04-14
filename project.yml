@@ -1,5 +1,10 @@
 name: Grannie
 
+include:
+  - Grannie/Modules/Children.yml
+  - Grannie/Modules/ParentOne/ParentOne.yml
+  - Grannie/Modules/ParentTwo/ParentTwo.yml
+
 options:
   createIntermediateGroups: true
 
@@ -17,6 +22,10 @@ targets:
     sources:
       - path: Grannie/Sources
       - path: Grannie/Resources
+    dependencies:
+      - target: Children
+      - target: ParentOne
+      - target: ParentTwo
   GrannieTests:
     platform: iOS
     type: bundle.unit-test

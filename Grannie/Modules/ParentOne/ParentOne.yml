@@ -1,0 +1,21 @@
+name: ParentOne
+
+include:
+  - ../Children.yml
+  - ../ChildOne/ChildOne.yml
+  - ../ChildTwo/ChildTwo.yml
+  - ../ChildThree/ChildThree.yml
+
+targets:
+  ParentOne:
+    platform: iOS
+    type: framework
+    info:
+      path: Info.plist
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.GrannieParentOne
+    sources:
+      - path: Sources
+    dependencies:
+      - target: Children
