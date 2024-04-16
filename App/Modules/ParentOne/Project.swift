@@ -7,7 +7,7 @@ let project = Project(
       name: "ParentOne",
       destinations: .iOS,
       product: .framework,
-      bundleId: "me.lievano.GrannieParentOne",
+      bundleId: "me.lievano.AppParentOne",
       infoPlist: .default,
       sources: ["Sources/**"],
       resources: [],

@@ -8,6 +8,6 @@ targets:
       path: Info.plist
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.GrannieChildTwo
+        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.AppChildTwo
     sources:
       - path: Sources

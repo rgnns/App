@@ -1,40 +1,38 @@
-name: Grannie
+name: App
 
 include:
-  - Grannie/Modules/Children.yml
-  - Grannie/Modules/ParentOne/ParentOne.yml
-  - Grannie/Modules/ParentTwo/ParentTwo.yml
+  - App/Modules/ParentOne/ParentOne.yml
+  - App/Modules/ParentTwo/ParentTwo.yml
 
 options:
   createIntermediateGroups: true
 
 targets:
-  Grannie:
+  App:
     platform: iOS
     type: application
     info:
-      path: Grannie/Info.plist
+      path: App/Info.plist
       properties:
         UILaunchStoryboardName: LaunchScreen.storyboard
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.Grannie
+        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.App
     sources:
-      - path: Grannie/Sources
-      - path: Grannie/Resources
+      - path: App/Sources
+      - path: App/Resources
     dependencies:
-      - target: Children
       - target: ParentOne
       - target: ParentTwo
-  GrannieTests:
+  AppTests:
     platform: iOS
     type: bundle.unit-test
     info:
-      path: Grannie/Tests-Info.plist
+      path: App/Tests-Info.plist
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.GrannieTests
+        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.AppTests
     sources:
-      - path: Grannie/Tests
+      - path: App/Tests
     dependencies:
-      - target: Grannie
+      - target: App

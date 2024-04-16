@@ -13,9 +13,9 @@ targets:
       path: Children-Info.plist
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.GrannieChildren
+        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.AppChildren
     sources:
-      - path: ../../Shared/Sources/Stub.swift
+      - path: Children.h
     dependencies:
       - target: ChildOne
       - target: ChildTwo

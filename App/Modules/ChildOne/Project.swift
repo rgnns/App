@@ -1,13 +1,13 @@
 import ProjectDescription
 
 let project = Project(
-  name: "ChildThree",
+  name: "ChildOne",
   targets: [
     .target(
-      name: "ChildThree",
+      name: "ChildOne",
       destinations: .iOS,
       product: .staticFramework,
-      bundleId: "me.lievano.GrannieChildThree",
+      bundleId: "me.lievano.AppChildOne",
       infoPlist: .default,
       sources: ["Sources/**"],
       resources: [],

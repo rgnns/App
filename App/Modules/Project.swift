@@ -7,7 +7,7 @@ let project = Project(
       name: "Children",
       destinations: .iOS,
       product: .framework,
-      bundleId: "me.lievano.GrannieChildren",
+      bundleId: "me.lievano.AppChildren",
       infoPlist: .default,
       sources: ["../../Shared/Sources/Stub.swift"],
       resources: [],

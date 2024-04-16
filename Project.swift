@@ -1,35 +1,35 @@
 import ProjectDescription
 
 let project = Project(
-  name: "Grannie",
+  name: "App",
   targets: [
     .target(
-      name: "Grannie",
+      name: "App",
       destinations: .iOS,
       product: .app,
-      bundleId: "me.lievano.Grannie",
+      bundleId: "me.lievano.App",
       infoPlist: .extendingDefault(
         with: [
           "UILaunchStoryboardName": "LaunchScreen.storyboard",
         ]
       ),
-      sources: ["Grannie/Sources/**"],
-      resources: ["Grannie/Resources/**"],
+      sources: ["App/Sources/**"],
+      resources: ["App/Resources/**"],
       dependencies: [
-        .project(target: "ParentOne", path: .relativeToManifest("Grannie/Modules/ParentOne")),
-        .project(target: "ParentTwo", path: .relativeToManifest("Grannie/Modules/ParentTwo")),
+        .project(target: "ParentOne", path: .relativeToManifest("App/Modules/ParentOne")),
+        .project(target: "ParentTwo", path: .relativeToManifest("App/Modules/ParentTwo")),
       ]
     ),
     .target(
-      name: "GrannieTests",
+      name: "AppTests",
       destinations: .iOS,
       product: .unitTests,
-      bundleId: "me.lievano.GrannieTests",
+      bundleId: "me.lievano.AppTests",
       infoPlist: .default,
-      sources: ["Grannie/Tests/**"],
+      sources: ["App/Tests/**"],
       resources: [],
       dependencies: [
-        .target(name: "Grannie"),
+        .target(name: "App"),
       ]
     ),
   ]

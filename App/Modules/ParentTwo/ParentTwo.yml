@@ -9,13 +9,15 @@ include:
 targets:
   ParentTwo:
     platform: iOS
-    type: framework
+    type: framework.static
     info:
       path: Info.plist
     settings:
       base:
-        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.GrannieParentTwo
+        PRODUCT_BUNDLE_IDENTIFIER: me.lievano.AppParentTwo
     sources:
       - path: Sources
     dependencies:
-      - target: Children
+      - target: ChildOne
+      - target: ChildTwo
+      - target: ChildThree
